@@ -48,3 +48,9 @@ body{
 
     color: #828181;
 }
+
+@media screen and (max-width: 600px){
+    body{
+        background-position: center;
+    }
+} 
