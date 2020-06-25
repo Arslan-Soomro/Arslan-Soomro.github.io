@@ -1,0 +1,55 @@
+@font-face{
+    font-family: Finland;
+    src: url(fonts/Finland.ttf);
+}
+
+@font-face{
+    font-family: Humblle;
+    src: url(fonts/Humblle.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100wh;
+    height: 100vh;
+
+    background-image: url(images/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+}
+
+#title_container{
+    width: 70vw;
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+    
+    position: relative;
+
+}
+
+
+#title{
+    
+    
+    font-family: humblle;
+
+    font-size: 12vw;
+
+    position: relative;
+    top: 30%;
+
+    color: #828181;
+}
