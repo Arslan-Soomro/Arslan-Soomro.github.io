@@ -38,7 +38,6 @@ body{
 
 #title{
     
-    
     font-family: humblle;
 
     font-size: 12vw;
@@ -46,7 +45,7 @@ body{
     position: relative;
     top: 30%;
 
-    color: #828181;
+    color: white;
 }
 
 @media screen and (max-width: 600px){
