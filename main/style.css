@@ -1,4 +1,9 @@
 @font-face{
+    font-family: beckman;
+    src: url(fonts/beckman.otf);
+}
+
+@font-face{
     font-family: Humblle;
     src: url(fonts/Humblle.ttf);
 }
@@ -13,16 +18,17 @@ body{
     width: 100wh;
     height: 100vh;
 
-    background-image: url(images/bg2.jpg);
+    background-image: url(images/bg1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
     overflow: hidden;
 
 }
 
 #title_container{
-    width: 70vw;
+    width: 90vw;
     height: 100%;
 
     margin: 0 auto;
@@ -30,7 +36,7 @@ body{
     display: flex;
 
     justify-content: center;
-    
+
     position: relative;
 
 }
@@ -38,18 +44,20 @@ body{
 
 #title{
     
-    font-family: humblle;
+    
+    font-family: beckman;
 
-    font-size: 12vw;
+    font-size: 8vw;
 
     position: relative;
-    top: 30%;
+    top: 40%;
 
-    color: white;
+    color: rgba(255 ,255 , 255, 0.5);
 }
 
-@media screen and (max-width: 600px){
-    body{
-        background-position: center;
+@media screen and (max-width: 850px){
+    #title{
+       font-size: 10vw;
+       top: 45%;
     }
 } 
