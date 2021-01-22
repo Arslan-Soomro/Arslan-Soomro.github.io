@@ -1,0 +1,123 @@
+#contact-cont{
+	width:95%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#contact-text{
+	width: 45%;
+	animation: fadeIn ease 0.5s;
+	position: relative;
+}
+
+#contact-heading{
+	font-family: montserrat-bold;
+	font-size: 130px;
+	color: blue;
+}
+
+#contact-msg{
+	font-family: montserrat-light;
+	font-size: 30px;
+	color: #323232;
+}
+
+#contact-box{
+	width: 30%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: rgb(250,250,250);
+	box-shadow: 0px 0px 20px 10px rgba(0, 0, 255, 0.1);
+	border-radius: 20px;
+	animation: fadeIn ease 0.5s;
+	position: relative;
+}
+
+#contact-box-heading{
+	font-family: montserrat-bold;
+	font-size: 30px;
+	color: blue;
+	margin-bottom: 5px;
+}
+
+#contact-name{
+	width: 300px;
+	height: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#contact-email{
+	width: 300px;
+	height: 50px;
+	margin-bottom: 20px;
+}
+
+#contact-disc{
+	width: 300px;
+	height: 200px;
+	resize: none;
+}
+
+.blue-input{
+	background: transparent;
+	border: none;
+	border-bottom: 0px solid blue;
+	border-bottom: 1px solid blue;
+	color: #323232;
+	font-family: montserrat-light;
+	padding: 10px 10px;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+.blue-input:focus{
+	outline: none;
+}
+
+#contact-btn{
+	font-family: staatliches;
+	margin-top: 30px;
+	width: 120px;
+	height: 40px;
+	font-size: 30px;
+	border:none;
+	border-bottom: 1px solid blue;
+	border-radius: 5px;
+	background-color: transparent;
+	color: blue;
+}
+
+#contact-btn:hover{
+	cursor: pointer;
+	color: rgb(0, 0, 200);
+}
+
+#contact-btn:active{
+	color: rgb(0, 0, 180);
+}
+
+#contact-btn:focus{
+	outline: none;
+}
+
+#contact-backdrop-text{
+	position: absolute;
+	font-size: 400px;
+	font-family: montserrat-bold;
+	color: #E9E9E9;
+	z-index: -1;
+	top: 100px;
+	left: 500px;
+	animation: moveIn_500 ease-out 2s;
+}
+
+@keyframes moveIn_500 {
+	0% {left: -500px;}
+	100%{left: 500px;}
+}

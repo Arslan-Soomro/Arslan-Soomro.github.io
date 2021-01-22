@@ -1,0 +1,63 @@
+#main-text{
+	width: 60%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#main-text *{
+	margin-left: 30px;
+	margin-top: 0px;
+}
+
+#main-heading{
+	font-size: 130px;
+	color: var(--pop-color);
+	font-family: staatliches;
+	position: relative;
+	animation: fadeIn ease 0.5s;
+}
+
+#main-msg{
+	font-size: 50px;
+	color: #353535;
+	font-family: staatliches;
+	position: relative;
+	animation: fadeIn ease 0.5s;
+}
+
+#main-btn{
+	padding: 5px 15px;
+	font-size: 30px;
+	margin-top: 20px;
+	font-family: staatliches;
+	position: relative;
+	animation: fadeIn ease 0.5s;
+}
+
+#img-image{
+	width: 35%;
+	height: 100%;
+	position: relative;
+	animation: fadeIn ease 0.5s;
+}
+
+#img-image img{
+	height: 100%;
+	width:100%;
+	object-fit: cover;
+}
+
+#home-backdrop-text{
+	position: absolute;
+	top: 200px;
+	left: 00px;
+	font-size: 400px;
+	margin-top: 100px;
+	z-index: -1;
+	color: #E0E0E0;
+	font-family: staatliches;
+	animation: moveIn ease 1s;
+}

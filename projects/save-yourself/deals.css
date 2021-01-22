@@ -1,0 +1,62 @@
+#deal-cont{
+	width: 95%;
+	height: 100%;
+	background: url("images/back.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column; 
+	position: relative;
+}
+
+
+#deal-heading{
+	color: white;
+	font-family: montserrat-bold;
+	font-size: 50px;
+	animation: fadeIn ease 0.5s;
+	position: relative;
+}
+
+#deal-msg{
+	color: white;
+	font-family: montserrat-light;
+	font-size: 35px;
+	margin-top: 20px;
+	width: 50%;
+	text-align: center;
+	animation: fadeIn ease 0.5s;
+	position: relative;
+}
+
+#deal-btn{
+	background: transparent;
+	margin-top: 30px;
+	border: none;
+	border-radius: 0px;
+	font-size: 30px;
+	font-family: staatliches;
+	padding: 5px 20px;
+	color: white;
+	border-bottom: 2px solid #0518B2;
+	transition: background-color 0.3s;
+	animation: fadeIn ease 0.5s;
+	position: relative;
+}
+
+#deal-btn:hover{
+	color: white;
+	background: #0518B2;
+	cursor: pointer;
+}
+
+#deal-btn:active{
+	color: #C9C8C8;
+}
+
+#deal-btn:focus{
+	outline: none;
+}
