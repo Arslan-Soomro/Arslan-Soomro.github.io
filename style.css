@@ -33,14 +33,107 @@
 }
 
 html{
-    width: 100vw;
-    height: 100vh;
+    background-color: #039BE5;
 }
 
 body{
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color);
+    background-color: #414141;
+}
+
+/*-----Global_Section-----*/
+
+.sec-heading{
+    color: var(--text-color);
+    font-family: poppins;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.grayed-heading{
+    font-family: poppins;
+    font-weight: 700;
+    color: var(--text-color-thi);
+    font-size: 2em;
+}
+
+/*--COLORS--*/
+
+.orange-text{
+    color: #FF6D00;
+}
+
+.orange-back{
+    background-color: #FFF0F0;
+}
+
+.dblue-text{
+    color: #039BE5;
+}
+
+.dblue-back{
+    background-color: #F0F1FF;
+}
+
+.teal-text{
+    color: #19B5B9;
+}
+
+.teal-back{
+    background-color: #DAFEFC;
+}
+
+.turquiose-text{
+    color: #27D8FC;
+}
+
+.turquiose-back{
+    background-color: #DEF6FB;
+}
+
+.yellow-text{
+    color: #FFD600;
+}
+
+.yellow-back{
+    background-color: #FFFEDC;
+}
+
+.green-text{
+    color: #2ECC71;
+}
+
+.green-back{
+    background-color: #D6FEE7;
+}
+
+.lblack-text{
+    color: #414141;
+}
+
+.lblack-back{
+    background-color: #F5F5F5;
+}
+
+.lgreen-text{
+    color: #4CAF50;
+}
+
+.lgreen-back{
+    background-color: #D6FEE7;
+}
+
+.navy-text{
+    color: #003B57;
+}
+
+.navy-back{
+    background-color: #D7E8F1;
 }
 
 /*-----Hero_Section-----*/
@@ -54,6 +147,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 2em;
+    
     
     color: var(--text-color);
     font-family: poppins;
@@ -80,12 +174,13 @@ body{
     color: var(--text-color);
     background-color: transparent;
     font-family: poppins;
+    font-size: 1.5em;
     font-weight: 700;
-    padding: 0.5em 1em;
+    padding: 0.5em 1.5em;
     border-radius: 50px;
     border: none;
     border: 2px solid var(--text-color);
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 #hero p span{
@@ -96,8 +191,9 @@ body{
 
 .about-section{
     background-color: var(--bg-color-sec);
-    padding: 4em;
+    padding: 40px;
     font-family: poppins;
+    text-align: center;
 }
 
 .about-section h2{
@@ -109,9 +205,51 @@ body{
 .about-section p{
     color: var(--text-color-sec);
     font-size: 2em;
-    font-weight: 100;
+    font-weight: 400;
 }
 
+/*-----Skills_Section-----*/
+
+#skills-section{
+    padding: 10px;
+    background-color: var(--bg-color);
+}
+
+.skills-container{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 15px
+}
+
+.skill-card{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.skill-card div{
+    display: flex;
+    align-items: center;
+}
+
+.skill-card img{
+    width: 4.5em;
+    height: 4.5em;
+}
+
+.skill-card div h3{
+    font-size: 2.5em;
+    font-family: poppins;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.skill-card p{
+    font-size: 1.5em;
+    font-family: poppins;
+    font-weight: 400;
+    color: var(--text-color-thi);
+}
 
 
 @media (max-width: 600px){
