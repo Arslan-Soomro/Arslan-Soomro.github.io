@@ -33,13 +33,12 @@
 }
 
 html{
-    background-color: #039BE5;
+    
 }
 
 body{
     width: 100%;
     height: 100%;
-    background-color: #414141;
 }
 
 /*-----Global_Section-----*/
@@ -195,9 +194,10 @@ body{
 
 .about-section{
     background-color: var(--bg-color-sec);
-    padding: 20px;
+    padding: 2em;
     font-family: poppins;
-    text-align: left;
+
+    text-align: center;
 }
 
 .about-section h2{
@@ -208,7 +208,7 @@ body{
 
 .about-section p{
     color: var(--text-color-sec);
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 400;
 }
 
@@ -255,6 +255,68 @@ body{
     color: var(--text-color-thi);
 }
 
+/*-----Services_Section-----*/
+
+#services-section{
+    padding: 20px; 
+    background-color: var(--bg-color);
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px 40px;
+}
+
+.service-card .service-card-title{
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 5px auto;
+    text-align: center;
+
+}
+
+.service-card .service-card-title div{
+    --img-dim: 6em;
+
+    width: var(--img-dim);
+    height: var(--img-dim);
+    border-radius: 60px;
+    background-color: var(--bg-color-sec);
+
+    overflow: hidden;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px;
+}
+
+
+.service-card .service-card-title div img{
+    width: calc(var(--img-dim) / 1.8);
+}
+
+.service-card .service-card-title h2{
+    font-family: poppins;
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.5em;
+}
+
+.service-card .service-card-disc{
+    font-family: poppins;
+    font-size: 1.5em;
+    color: var(--text-color);
+    font-weight: 400;
+
+    text-align: center;
+}
 
 @media (max-width: 600px){
     body{
