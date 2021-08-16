@@ -470,13 +470,11 @@ body{
 }
 
 @media (min-width: 1350px){
-    :root{
-        
-    }
 
     .services-container{
         grid-template-columns: 1fr 1fr 1fr;
-        place-items: start;
+        justify-content: center;
+        align-items: start;
         margin: 50px;
     }
 }
