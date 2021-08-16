@@ -91,10 +91,12 @@ body{
     background-color: var(--bg-color);
     font-size: 1rem;
     padding: 0px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     padding: 2em;
     min-height: 100vh;
     
@@ -113,9 +115,9 @@ body{
     font-size: 2rem;
 }
 
-#hero p{
+#hero div p{
     font-weight: 400;
-    font-size: 2em;
+    font-size: 2rem;
     margin: 10px;
 }
 
@@ -124,16 +126,16 @@ body{
     height: auto;
 }
 
-#hero button{
+#hero div button{
     color: var(--text-color);
     background-color: transparent;
     font-family: poppins;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 700;
     padding: 0.5em 1.5em;
     border-radius: 50px;
     border: none;
-    border: 2px solid var(--text-color);
+    border: 0.3rem solid var(--text-color);
 }
 
 /*-----About_Section-----*/
@@ -370,6 +372,80 @@ body{
     font-size: 1.5em;
     font-weight: 400;
     display: block;
+}
+
+/*-----Media-Queries----*/
+
+@media (min-width: 500px){
+    :root{
+        --text-color: #212121;
+    }
+
+    #hero img{
+        width: 40%;
+    }
+}
+
+@media (min-width: 760px) {
+    :root{
+        --text-color: #1d8361;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 800px){
+    :root{
+        --text-color: dodgerblue;
+        font-size: 15px;
+    }
+
+    #hero{
+        display: grid;
+        justify-content: unset;
+        align-items: unset;
+
+        grid-template-columns: 48% 48%;
+        grid-template-rows: 50% 50%;
+    }
+
+    #hero h1 span{
+        display: block;
+    }
+
+    #hero h1{
+        grid-row: 1/2;
+        align-self: end;
+        justify-self: start;
+        text-align: left;
+
+        margin-left: 5rem;
+    }
+
+    #hero div{
+        grid-row: 2/3;
+        align-self: start;
+        justify-self: start;
+        text-align: left;
+
+        margin-left: 5rem;
+    }
+
+    #hero div button{
+        margin-top: 15px;
+    }
+
+    #hero div p{
+        margin: 0px;
+    }
+
+    #hero img{
+        grid-row: 1/3;
+        place-self: center;
+        width: 60%;
+        max-height: 70%;
+    }
+
+
 }
 
 /*--COLORS--*/
