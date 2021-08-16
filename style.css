@@ -206,14 +206,15 @@ body{
 /*-----Services_Section-----*/
 
 #services-section{
-    padding: 20px; 
+    padding: 50px; 
     background-color: var(--bg-color);
 }
 
 .services-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px 40px;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: 1fr;
+    grid-gap: 30px 50px;
 }
 
 .service-card .service-card-title{
@@ -259,7 +260,7 @@ body{
 
 .service-card .service-card-disc{
     font-family: poppins;
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: var(--text-color);
     font-weight: 400;
 
@@ -379,10 +380,15 @@ body{
 @media (min-width: 500px){
     :root{
         --text-color: #212121;
+        font-size: 12px;
     }
 
     #hero img{
         width: 40%;
+    }
+
+    .about-section p{
+        font-size: 1.8em;
     }
 }
 
@@ -391,9 +397,20 @@ body{
         --text-color: #1d8361;
         font-size: 13px;
     }
+
+    /*----Skills----*/
+    .skills-container{
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 30px
+    }
+
+    .about-section{
+        text-align: left;
+        padding: 80px;
+    }
 }
 
-@media (min-width: 800px){
+@media (min-width: 960px){
     :root{
         --text-color: dodgerblue;
         font-size: 15px;
@@ -445,7 +462,23 @@ body{
         max-height: 70%;
     }
 
+    .services-container{
+        grid-template-columns: 1fr 1fr;
+        place-items: start;
+        margin: 50px;
+    }
+}
 
+@media (min-width: 1350px){
+    :root{
+        
+    }
+
+    .services-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: start;
+        margin: 50px;
+    }
 }
 
 /*--COLORS--*/
