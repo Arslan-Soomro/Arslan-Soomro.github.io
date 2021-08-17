@@ -76,11 +76,11 @@ body{
 .round-btn:hover{
     cursor: pointer;
     background-color: var(--text-color);
-    color: white;
+    color: transparent;
 }
 
 .round-btn:active{
-    background-color: #01415f;
+    background-color: rgb(23, 70, 117);
 }
 
 .text-bold{
@@ -114,12 +114,12 @@ body{
 
 #hero h1 span{
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 0.4em;
 }
 
 #hero div p{
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     margin: 10px;
 }
 
@@ -132,9 +132,9 @@ body{
     color: var(--text-color);
     background-color: transparent;
     font-family: poppins;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: 700;
-    padding: 0.5em 1.5em;
+    padding: 0.4em 1em;
     border-radius: 50px;
     border: none;
     border: 0.2rem solid var(--text-color);
@@ -159,6 +159,7 @@ body{
     font-family: poppins;
 
     text-align: center;
+    padding: 50px 30px;
 }
 
 .about-section h2{
@@ -182,7 +183,7 @@ body{
 }
 
 .skills-group{
-    max-width: 1500px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
@@ -235,6 +236,9 @@ body{
     /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     grid-template-columns: 1fr;
     grid-gap: 30px 50px;
+
+    max-width: 2500px;
+    margin: 0 auto;
 }
 
 .service-card .service-card-title{
@@ -417,7 +421,11 @@ body{
 @media (min-width: 500px){
     :root{
         --text-color: #212121;
-        font-size: 12px;
+        font-size: 10px;
+    }
+
+    #hero{
+        font-size: 1.2rem;
     }
 
     #hero img{
@@ -440,35 +448,20 @@ body{
     #skills-section{
         padding: 40px 30px;
     }
-}
-
-@media (min-width: 760px) {
-    :root{
-        --text-color: #1d8361;
-        font-size: 13px;
-    }
-
-    .skills-container{
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        grid-gap: 30px
-    }
 
     .about-section{
-        text-align: left;
-        padding: 80px;
+        padding: 80px 50px;
     }
 
-    #skills-section{
-        padding: 50px 30px;
+    .projects-container{
+        grid-template-columns: repeat(auto-fit, 250px);
     }
-
-
 }
 
-@media (min-width: 960px){
-    :root{
+@media (min-width: 700px){
+    :root{ 
         --text-color: dodgerblue;
-        font-size: 15px;
+        font-size: 11px;
     }
 
     #hero{
@@ -511,6 +504,7 @@ body{
 
     #hero div p{
         margin: 0px;
+
     }
 
     #hero img{
@@ -518,6 +512,20 @@ body{
         place-self: center;
         width: 60%;
         max-height: 70%;
+    }
+
+    .about-section{
+        text-align: left;
+        padding: 80px;
+    }
+    
+    #skills-section{
+        padding: 50px 30px;
+    }
+
+    .skills-container{
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        grid-gap: 30px
     }
 
     .services-container{
@@ -545,28 +553,12 @@ body{
         --text-color: rgb(19, 78, 138);
     }
 
-    /* #hero h1{
-        font-size: 8em;
+    #hero{
+        font-size: 1.3rem;
     }
-
-    #hero h1 span{
-        font-size: 2.5rem;
-    }
-
-    #hero div p{
-        font-size: 2.4rem;
-    } */
 
     .about-section{
         padding: 100px 10%;
-    }
-
-    #skills-section{
-        
-    }
-
-    #services-section{
-        
     }
 
     .services-container{
@@ -574,9 +566,6 @@ body{
         justify-content: center;
         align-items: start;
         margin: 50px;
-
-        max-width: 2500px;
-        margin: 0 auto;
     }
 
     .projects-container{
