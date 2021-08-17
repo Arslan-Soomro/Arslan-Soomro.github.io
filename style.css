@@ -87,6 +87,10 @@ body{
     font-weight: 700;
 }
 
+button:focus{
+    outline: none;
+}
+
 /*-----Hero_Section-----*/
 
 #hero{
@@ -504,7 +508,6 @@ body{
 
     #hero div p{
         margin: 0px;
-
     }
 
     #hero img{
@@ -516,7 +519,7 @@ body{
 
     .about-section{
         text-align: left;
-        padding: 80px;
+        padding: 70px 10%;
     }
     
     #skills-section{
@@ -555,10 +558,6 @@ body{
 
     #hero{
         font-size: 1.3rem;
-    }
-
-    .about-section{
-        padding: 100px 10%;
     }
 
     .services-container{
