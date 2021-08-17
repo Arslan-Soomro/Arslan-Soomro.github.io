@@ -30,6 +30,8 @@
     --text-color: #32497B;
     --text-color-sec: #505675;
     --text-color-thi: #7D88A1;
+    --text-color-for: rgb(19, 78, 138);
+    --text-color-pr: dodgerblue;
 }
 
 html{
@@ -138,6 +140,16 @@ body{
     border: 0.3rem solid var(--text-color);
 }
 
+#hero div button:hover{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+#hero div button:active{
+    background-color:rgb(23, 70, 117);
+}
+
 /*-----About_Section-----*/
 
 .about-section{
@@ -163,8 +175,13 @@ body{
 /*-----Skills_Section-----*/
 
 #skills-section{
-    padding: 10px;
+    padding: 30px 10px;
     background-color: var(--bg-color);
+}
+
+.skills-group{
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .skills-container{
@@ -410,6 +427,15 @@ body{
     .projects-container{
         grid-template-columns: 45% 45%;
     }
+
+    .grayed-heading{
+        font-size: 2.2em;
+        margin: 20px 0px;
+    }
+
+    #skills-section{
+        padding: 40px 30px;
+    }
 }
 
 @media (min-width: 760px) {
@@ -418,7 +444,6 @@ body{
         font-size: 13px;
     }
 
-    /*----Skills----*/
     .skills-container{
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         grid-gap: 30px
@@ -428,6 +453,12 @@ body{
         text-align: left;
         padding: 80px;
     }
+
+    #skills-section{
+        padding: 50px 30px;
+    }
+
+
 }
 
 @media (min-width: 960px){
@@ -503,6 +534,11 @@ body{
 
 @media (min-width: 1350px){
 
+    :root{
+        --text-color: rgb(19, 78, 138);
+    }
+
+
     .services-container{
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
@@ -515,11 +551,11 @@ body{
     }
 
     .projects-container{
-        grid-template-columns: repeat(3, minmax(600px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     }
 
     .projects-card{
-        /* width: 600px; */
+        width: 600px;
     }
 }
 
