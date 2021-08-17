@@ -119,7 +119,7 @@ body{
 
 #hero div p{
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 10px;
 }
 
@@ -132,12 +132,12 @@ body{
     color: var(--text-color);
     background-color: transparent;
     font-family: poppins;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     padding: 0.5em 1.5em;
     border-radius: 50px;
     border: none;
-    border: 0.3rem solid var(--text-color);
+    border: 0.2rem solid var(--text-color);
 }
 
 #hero div button:hover{
@@ -153,6 +153,7 @@ body{
 /*-----About_Section-----*/
 
 .about-section{
+    font-size: 1rem;
     background-color: var(--bg-color-sec);
     padding: 2em;
     font-family: poppins;
@@ -177,6 +178,7 @@ body{
 #skills-section{
     padding: 30px 10px;
     background-color: var(--bg-color);
+    font-size: 1rem;
 }
 
 .skills-group{
@@ -225,6 +227,7 @@ body{
 #services-section{
     padding: 50px; 
     background-color: var(--bg-color);
+    font-size: 1rem;
 }
 
 .services-container{
@@ -287,8 +290,9 @@ body{
 /*-----Projects_Section-----*/
 
 #projects-section{
-    padding: 15px;
+    padding: 50px 15px;
     background-color: var(--bg-color);
+    font-size: 1rem;
 }
 
 .projects-container{
@@ -325,7 +329,7 @@ body{
 }
 
 .project-card-disc h2{
-    font-size: 2.5rem;
+    font-size: 2.5em;
 }
 
 .project-card-disc p{
@@ -487,6 +491,9 @@ body{
         text-align: left;
 
         margin-left: 5rem;
+
+        /*Brings h1 a bit down*/
+        line-height: 0.8em;
     }
 
     #hero div{
@@ -538,25 +545,44 @@ body{
         --text-color: rgb(19, 78, 138);
     }
 
+    /* #hero h1{
+        font-size: 8em;
+    }
+
+    #hero h1 span{
+        font-size: 2.5rem;
+    }
+
+    #hero div p{
+        font-size: 2.4rem;
+    } */
+
+    .about-section{
+        padding: 100px 10%;
+    }
+
+    #skills-section{
+        
+    }
+
+    #services-section{
+        
+    }
 
     .services-container{
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
         align-items: start;
         margin: 50px;
-    }
 
-    #projects-section{
-        
+        max-width: 2500px;
+        margin: 0 auto;
     }
 
     .projects-container{
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    .projects-card{
-        width: 600px;
-    }
 }
 
 /*--COLORS--*/
