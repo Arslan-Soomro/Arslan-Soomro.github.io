@@ -76,7 +76,7 @@ body{
 .round-btn:hover{
     cursor: pointer;
     background-color: var(--text-color);
-    color: transparent;
+    color: var(--bg-color);
 }
 
 .round-btn:active{
@@ -118,8 +118,11 @@ button:focus{
 
 #hero h1 span{
     font-weight: 400;
-    font-size: 0.4em;
+    font-size: 0.3em;
+    line-height: 1.2em;
+    margin-left: 1.2em;
 }
+
 
 #hero div p{
     font-weight: 400;
@@ -283,12 +286,12 @@ button:focus{
     font-family: poppins;
     font-weight: 700;
     color: var(--text-color);
-    font-size: 2em;
+    font-size: 1.7em;
 }
 
 .service-card .service-card-disc{
     font-family: poppins;
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: var(--text-color);
     font-weight: 400;
 
@@ -360,14 +363,29 @@ button:focus{
     margin: 10px auto;
     border-radius: 0px;
     border-width: 3px;
-    
+    padding: 5px 15px; 
+    font-family: poppins;
+    border: 2px solid var(--text-color);
+    background-color: transparent;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.load-btn:hover{
+    cursor: pointer;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.load-btn:active{
+    background-color: rgb(23, 70, 117);
 }
 
 /*-----Contact_Section-----*/
 
 #contact-section{
     background-color: var(--bg-color-sec);
-    padding: 15px;
+    padding: 20px;
 
     display: flex;
     flex-direction: column;
@@ -377,6 +395,8 @@ button:focus{
     color: var(--text-color);
     font-family: poppins;
     text-align: center;
+
+    font-size: 1rem;
 }
 
 #contact-section h2{
@@ -398,10 +418,11 @@ button:focus{
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    margin: 20px;
 }
 
 .asoc-link{
-    margin: 20px 20px;
+    margin: 10px 20px;
 }
 
 .soc-link:hover{
@@ -479,6 +500,7 @@ button:focus{
 
     #hero h1 span{
         display: block;
+        font-size: 2rem;
     }
 
     #hero h1{
@@ -486,6 +508,8 @@ button:focus{
         align-self: end;
         justify-self: start;
         text-align: left;
+
+        font-size: 6em;
 
         margin-left: 5rem;
 
@@ -550,6 +574,12 @@ button:focus{
     }
 }
 
+@media (min-width: 1000px){
+    #hero h1{
+        font-size: 7em;
+    }
+}
+
 @media (min-width: 1350px){
 
     :root{
@@ -562,7 +592,7 @@ button:focus{
 
     .services-container{
         grid-template-columns: 1fr 1fr 1fr;
-        justify-content: center;
+        justify-items: center;
         align-items: start;
         margin: 50px;
     }
