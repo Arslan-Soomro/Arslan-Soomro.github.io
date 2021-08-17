@@ -27,11 +27,12 @@
     font-size: 10px;
     --bg-color: #F5FFFE;
     --bg-color-sec: #E8FFFD;
-    --text-color: #32497B;
+    --text-color: rgb(0, 76, 151);
+    --text-color-pr: #32497B;
     --text-color-sec: #505675;
     --text-color-thi: #7D88A1;
     --text-color-for: rgb(19, 78, 138);
-    --text-color-pr: dodgerblue;
+    
 }
 
 html{
@@ -445,9 +446,9 @@ button:focus{
 
 @media (min-width: 500px){
     :root{
-        --text-color: #212121;
-        font-size: 10px;
+        /* --text-color: #212121; */
     }
+
 
     #hero{
         font-size: 1.2rem;
@@ -485,7 +486,7 @@ button:focus{
 
 @media (min-width: 700px){
     :root{ 
-        --text-color: dodgerblue;
+        /* --text-color: dodgerblue; */
         font-size: 11px;
     }
 
@@ -583,7 +584,7 @@ button:focus{
 @media (min-width: 1350px){
 
     :root{
-        --text-color: rgb(19, 78, 138);
+        /* --text-color: rgb(19, 78, 138); */
     }
 
     #hero{
