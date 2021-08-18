@@ -88,6 +88,10 @@ body{
     font-weight: 700;
 }
 
+.scroll-smooth{
+    scroll-behavior: smooth;
+}
+
 button:focus{
     outline: none;
 }
@@ -316,10 +320,13 @@ button:focus{
 
     padding: 30px 0px;
 
+    overflow: hidden;
 }
 
 .projects-container{
     display: flex;
+    align-items: center;
+
     overflow-x: scroll;
 
     padding: 30px 0px;
@@ -357,6 +364,13 @@ button:focus{
 
     min-width: 85%;
     margin: 0px 20px;
+
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.project-card:hover{
+    box-shadow: 0px 0px 20px 2px rgba(133, 133, 133, 0.4);
+    transform: scale(1.01);
 }
 
 .project-card img{
