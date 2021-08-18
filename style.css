@@ -325,11 +325,26 @@ button:focus{
     padding: 30px 0px;
     margin: 30px 0px;
 
-    scroll-snap-type: x mandatory;
+    user-select: none;
+    transition: transform 0.2s;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.projects-container:hover{    
+    cursor: grab;
+}
+
+.projects-container:active{
+    cursor: grabbing;
+    transform: scale(1.02);
+}
+
+.projects-container::-webkit-scrollbar{
+    display: none;
 }
 
 .project-card{
-
     text-align: center;
     font-family: poppins;
     color: var(--text-color);
@@ -342,8 +357,6 @@ button:focus{
 
     min-width: 85%;
     margin: 0px 20px;
-
-    scroll-snap-align: center;
 }
 
 .project-card img{
