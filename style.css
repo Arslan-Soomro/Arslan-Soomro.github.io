@@ -376,6 +376,9 @@ button:focus{
 .project-card img{
     width: 100%;
     height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .project-card-disc{
@@ -399,6 +402,25 @@ button:focus{
 
 .project-card-disc div button{
     font-size: 1.3em;
+}
+
+/*-----Loader-----*/
+.loader-spinner{
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent;
+    border-right-color: dodgerblue;
+    border-bottom-color: dodgerblue;
+    border-radius: 20px;
+    margin: 0 auto;
+    animation: load-spin 0.6s infinite linear;
+}
+
+@keyframes load-spin {
+    100% {transform: rotate(360deg);}
 }
 
 /*-----Contact_Section-----*/
@@ -460,6 +482,8 @@ button:focus{
     font-weight: 400;
     display: block;
 }
+
+
 
 /*-----Media-Queries----*/
 
