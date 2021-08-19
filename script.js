@@ -1,6 +1,4 @@
-//Globals
-const USERNAME = "arslan-soomro";
-const INCFILENAME = "$$$INCLUDEPROJECT$$$.json";
+import { USERNAME, AUTHHEADER, INCFILENAME } from "./credentials.js";
 
 //Projects-container slider logic
 const slider = document.querySelector('.projects-container');
@@ -51,7 +49,7 @@ slider.addEventListener('mousemove', (e) => {
 
 const getAllRepos = async () => {
 
-    console.log("return data");
+    console.log("RETURN " + USERNAME);
 
     const res = await fetch(`https://api.github.com/users/${USERNAME}/repos`);
     const data = await res.json();
@@ -86,7 +84,7 @@ const getIncludedRepos = async (repos) => {
     let repArr;
 
     for(let i = 0; i < repos.length; i++){
-        res = await fetch(`https://api.github.com/repos/${USERNAME}/${repos[i].name}/contents/${INCFILENAME}`);
+        res = await fetch(`https://api.github.com/repos/${USERNAME}/${repos[i].name}/contents/${INCFILENAME}`, AUTHHEADER);
         data = await res.json();
 
         if(data && data.name){
@@ -99,19 +97,18 @@ const getIncludedRepos = async (repos) => {
 
 const getContents = async () => {
     
-    const res = await fetch(`https://api.github.com/repos/arslan-soomro/qaj/contents/`);
+    const res = await fetch(`https://api.github.com/repos/arslan-soomro/qaj/contents/`, AUTHHEADER);
     const data = await res.json();
 
     console.log(data);
 }
 
+//getAllRepos();
+
 //getContents();
 
-getAllRepos().then(data => getIncludedRepos(data));
+//getAllRepos().then(data => getIncludedRepos(data));
 
 // fetch("https://raw.githubusercontent.com/Arslan-Soomro/Login-App/main/%24%24%24INCLUDEPROJECT%24%24%24.json")
 //     .then(res => res.json())
 //     .then(data => console.log(data));
-
-
-
