@@ -108,15 +108,57 @@ const createProjectCard = (info) => {
     `
     <img src=${info.imgsrc} alt=""/>
     <div class="project-card-disc">
-        <h2>${info.name}</h2>
+        <h2 class="project-card-disc-name">${info.name}</h2>
         <p>${info.description}</p>
         <div>
-            <button class="round-btn">More</button>
-            <button class="round-btn">Preview</button>
+            <a class="round-btn">More</a>
+            <a class="round-btn">Preview</a>
         </div>
     </div>
     `
     return card;
+}
+
+const sortByRating = (arr) => {
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr.length; j++){
+            if(arr[i].rating && arr[j].rating){//If rating is defined
+                if(arr[i].rating < arr[j].rating){
+                    const switcher = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = switcher;
+                }
+            }
+        }
+    }
+    return arr;
+}
+
+const sortByArr = (arr, sorterArr, elmentSelector) => {
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr.length; j++){
+            if(arr[j].querySelector(elmentSelector).textContent == sorterArr[i]){
+                let switcher = arr[i];
+                arr[i] = arr[j];
+                arr[j] = switcher;
+            }
+        }
+    }
+
+    return arr;
+}
+
+const AddChildren = (elementsArr, parentNode) => {
+    //Remove Previous Children
+    while(parentNode.firstElementChild){
+        parentNode.removeChild(parentNode.firstElementChild);
+    }
+
+    //Add New Children
+    for(let i = 0; i < elementsArr.length; i++){
+        parentNode.appendChild(elementsArr[i]);
+    }
+
 }
 
 const formProjects = async (repos) => {
@@ -131,8 +173,10 @@ const formProjects = async (repos) => {
         //Fetch Content Of Every Repo And Check If It Will Be Included as a project, it is a project if it contains $$$INCLUDEPROJECT$$$ Folder
         res = await fetch(`https://api.github.com/repos/${USERNAME}/${repos[i].name}/contents/${INCFILENAME}`, AUTHHEADER);
 
+        //If we succesfully fetch the data and $$$INCLUDEPROJECT$$$ Folder Exists
         if(res.status >= 200 && res.status < 300){
             data = await res.json();
+
             //FETCH IMPORTANT CONTENTS
             let contents = await getContents(data);
             //CLEAR THE UNNECESARY DATA OF REPO
@@ -145,17 +189,37 @@ const formProjects = async (repos) => {
             if(document.querySelector(".projects-container .loader-spinner")){
                 projectSlider.removeChild(document.querySelector(".projects-container .loader-spinner"));
             }
-            //Inject Into DOM
+            //INJECT INTO DOM
             projectSlider.appendChild(createProjectCard(repoInfo));
+        
         }else{
 
         }
     }
 
-    //ADD A Sorting FUNCTION HERE
+    //SORT PROJECTS BY THEIR RATING
+    PROJECTS = sortByRating(PROJECTS);
+    //GET PROJECT CARDS FROM DOM AND SORT THEM ACCORDING TO PROJECTS
+    projectCards = sortByArr([...projectSlider.children], PROJECTS, ".project-card-disc-name");
+    //REMOVE PREVIOUS CHILDREN AND ADD NEW SORTED CHILDREN INTO PROJECTS CONTAINER
+    AddChildren(projectCards, projectSlider);
 
     //ADD IMAGES IN GIT REPOS AND SETUP HERE TO RECEIVE THEM PROPERLY
 }
 
 //getAllRepos().then(data => formProjects(data)).catch(err => console.log("Couldn't Load Data", err));
 
+
+
+document.querySelector('#projects-section').addEventListener('click', (e) => {
+    
+    console.log('SORT');
+
+    let org = ["Fine", "Gotcha", "Hello", "Hi", "Whatup"];
+
+    let arr = sortByArr([...projectSlider.children], org, ".project-card-disc-name");
+    
+    arr.forEach((item) => console.log(item.querySelector(".project-card-disc-name").textContent));
+
+    AddChildren(arr, projectSlider);
+})

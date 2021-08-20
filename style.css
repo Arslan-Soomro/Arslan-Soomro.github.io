@@ -400,7 +400,7 @@ button:focus{
     justify-content: space-between;
 }
 
-.project-card-disc div button{
+.project-card-disc div a{
     font-size: 1.3em;
 }
 
