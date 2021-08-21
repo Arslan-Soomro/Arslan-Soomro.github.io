@@ -46,6 +46,14 @@ projectSlider.addEventListener('mousemove', (e) => {
     projectSlider.scrollLeft = scrollLeft - walk;
 });
 
+document.querySelector(".menu-btn").addEventListener('click', (e) => {
+    document.querySelector("#navbar").style.top = "0";
+})
+
+document.querySelector(".exit-img").addEventListener('click', (e) => {
+    document.querySelector("#navbar").style = null;
+})
+
 //Api Calls
 
 const filterOneRepo = item => {
@@ -215,6 +223,4 @@ const formProjects = async (repos) => {
     console.log("Complete");
 }
 
-getAllRepos().then(data => formProjects(data)).catch(err => console.log("Couldn't Load Data", err));
-
-//Make All The project cards same height and if one doesn't have image center it
+//getAllRepos().then(data => formProjects(data)).catch(err => console.log("Couldn't Load Data", err));
