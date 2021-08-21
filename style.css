@@ -472,8 +472,9 @@ button:focus{
     margin: 20px;
 }
 
-.asoc-link{
+.soc-link{
     margin: 10px 20px;
+    font-size: 1.4rem;
 }
 
 .soc-link:hover{
@@ -481,13 +482,14 @@ button:focus{
 }
 
 .soc-link img{
-    width: 3.5em;
+    width: 2.7em;
     height: auto;
     text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 
 .soc-link a{
-    font-size: 1.5em;
     font-weight: 400;
     display: block;
 }
