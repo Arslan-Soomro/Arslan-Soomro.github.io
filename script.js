@@ -92,7 +92,7 @@ const getContents = async (files) => {
 
         if(files[i].name == `${IMGNAME}.png`){
             //See which property mathces img src and put it in contents object here
-            contents.imgsrc = "";
+            contents.imgsrc = files[i].download_url;
         }
     }
 
@@ -104,18 +104,23 @@ const createProjectCard = (info) => {
     let card = document.createElement('div');
     card.classList.add('project-card');
 
+    if(!info.imgsrc){
+        card.style.alignSelf = "center";
+    }
+
     card.innerHTML = 
     `
-    <img src=${info.imgsrc} alt=""/>
+    ${info.imgsrc ? `<img src=${info.imgsrc} alt=""/>` : ""}
     <div class="project-card-disc">
         <h2 class="project-card-disc-name">${info.name}</h2>
-        <p>${info.description}</p>
-        <div>
-            <a class="round-btn">More</a>
-            <a class="round-btn">Preview</a>
-        </div>
+        <p>${info.description}</p>        
+    </div>
+    <div class="project-card-btn-group">
+            <a class="round-btn" href=${info.url} target="_blank">More</a>
+            <a class="round-btn" href=${info.pagelink} target="_blank">Preview</a>
     </div>
     `
+    
     return card;
 }
 
@@ -137,10 +142,11 @@ const sortByRating = (arr) => {
 const sortByArr = (arr, sorterArr, elmentSelector) => {
     for(let i = 0; i < arr.length; i++){
         for(let j = 0; j < arr.length; j++){
-            if(arr[j].querySelector(elmentSelector).textContent == sorterArr[i]){
+            if(arr[j].querySelector(elmentSelector).textContent == sorterArr[i].name){
                 let switcher = arr[i];
                 arr[i] = arr[j];
                 arr[j] = switcher;
+                break;
             }
         }
     }
@@ -197,29 +203,18 @@ const formProjects = async (repos) => {
         }
     }
 
+    //WE SORT PROJECTS ONLY ONCE ALL THE PROJECTS ARE LOADED
+
     //SORT PROJECTS BY THEIR RATING
     PROJECTS = sortByRating(PROJECTS);
     //GET PROJECT CARDS FROM DOM AND SORT THEM ACCORDING TO PROJECTS
-    projectCards = sortByArr([...projectSlider.children], PROJECTS, ".project-card-disc-name");
+    let projectCards = sortByArr([...projectSlider.children], PROJECTS, ".project-card-disc-name");
     //REMOVE PREVIOUS CHILDREN AND ADD NEW SORTED CHILDREN INTO PROJECTS CONTAINER
     AddChildren(projectCards, projectSlider);
 
-    //ADD IMAGES IN GIT REPOS AND SETUP HERE TO RECEIVE THEM PROPERLY
+    console.log("Complete");
 }
 
-//getAllRepos().then(data => formProjects(data)).catch(err => console.log("Couldn't Load Data", err));
+getAllRepos().then(data => formProjects(data)).catch(err => console.log("Couldn't Load Data", err));
 
-
-
-document.querySelector('#projects-section').addEventListener('click', (e) => {
-    
-    console.log('SORT');
-
-    let org = ["Fine", "Gotcha", "Hello", "Hi", "Whatup"];
-
-    let arr = sortByArr([...projectSlider.children], org, ".project-card-disc-name");
-    
-    arr.forEach((item) => console.log(item.querySelector(".project-card-disc-name").textContent));
-
-    AddChildren(arr, projectSlider);
-})
+//Make All The project cards same height and if one doesn't have image center it

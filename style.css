@@ -143,6 +143,11 @@ button:focus{
 #hero img{
     width: 50%;
     height: auto;
+    animation: fly 2s alternate infinite both;
+}
+
+@keyframes fly {
+    to {transform: rotate(-5deg) translateY(20px);}
 }
 
 #hero div button{
@@ -326,6 +331,7 @@ button:focus{
 .projects-container{
     display: flex;
     align-items: center;
+    justify-content: center;
 
     overflow-x: scroll;
 
@@ -395,13 +401,16 @@ button:focus{
     color: var(--text-color);
 }
 
-.project-card-disc div{
+.project-card-btn-group{
     display: flex;
     justify-content: space-between;
+    padding: 15px;
+    padding-top: 0px;
 }
 
-.project-card-disc div a{
+.project-card-btn-group a{
     font-size: 1.3em;
+    text-decoration: none;
 }
 
 /*-----Loader-----*/
@@ -491,7 +500,6 @@ button:focus{
     :root{
         /* --text-color: #212121; */
     }
-
 
     #hero{
         font-size: 1.2rem;
