@@ -233,4 +233,4 @@ const formProjects = async (repos) => {
     console.log("Complete");
 }
 
-//getAllRepos().then(data => formProjects(data)).catch(err => console.log("Couldn't Load Data", err));
+getAllRepos().then(data => formProjects(data)).catch(err => console.log("Couldn't Load Data", err));

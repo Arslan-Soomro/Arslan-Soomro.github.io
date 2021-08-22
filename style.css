@@ -210,8 +210,6 @@ button:focus{
 #hero h1{
     font-weight: 700;
     font-size: 5em;
-
-    
 }
 
 #hero h1 span{
@@ -429,8 +427,7 @@ button:focus{
 
 .projects-container{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
 
     overflow-x: scroll;
 
@@ -449,7 +446,7 @@ button:focus{
 
 .projects-container:active{
     cursor: grabbing;
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .projects-container::-webkit-scrollbar{
