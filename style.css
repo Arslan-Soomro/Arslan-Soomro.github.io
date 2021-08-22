@@ -168,8 +168,22 @@ button:focus{
     font-weight: bold;
 }
 
-#navbar .nav-list-item:hover{
+#navbar .nav-list-item a{
+    color: var(--text-color);
+    text-decoration: none;
+    
+}
+
+#navbar .nav-list-item a:visited{
+    color: inherit;
+}
+
+#navbar .nav-list-item a:hover{
     cursor: pointer;
+    color: rgb(3, 3, 167);
+}
+
+#navbar .nav-list-item a:active{
     color: navy;
 }
 
@@ -251,6 +265,10 @@ button:focus{
 
 #hero div a:active{
     background-color:rgb(23, 70, 117);
+}
+
+#hero div a:visited{
+    color: auto;
 }
 
 /*-----About_Section-----*/
@@ -556,6 +574,9 @@ button:focus{
 .soc-link{
     margin: 10px 20px;
     font-size: 1.4rem;
+    font-weight: 400;
+    display: block;
+    text-decoration: none;
 }
 
 .soc-link:hover{
@@ -570,9 +591,8 @@ button:focus{
     margin: 0 auto;
 }
 
-.soc-link a{
-    font-weight: 400;
-    display: block;
+.soc-link:visited{
+    color: inherit;
 }
 
 
@@ -747,47 +767,6 @@ button:focus{
         font-size: 3em;
     }
 }
-    /*
-    #navbar{
-        min-height: 65px;
-        width: 100%;
-        position: fixed;
-        background-color: var(--bg-color);
-        box-shadow: 0px 0px 15px 1px rgba(133, 133, 133, 0.2);
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    
-        font-size: 1rem;
-        font-family: poppins, serif;
-    
-        color: var(--text-color);
-        z-index: 2;
-    }
-    
-    #navbar .nav-logo{
-        margin: 0px 60px;
-        font-size: 3em;
-    }
-    
-    #navbar .nav-list{
-        list-style: none;
-        font-size: 1.5em;
-    }
-    
-    #navbar .nav-list-item{
-        display: inline;
-        margin: 0px 30px;
-    }
-    
-    #navbar .nav-list-item{
-        cursor: pointer;
-    }
-    
-*/
-
 
 
 @media (min-width: 1000px){
