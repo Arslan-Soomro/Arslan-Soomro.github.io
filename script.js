@@ -1,6 +1,16 @@
-import { USERNAME, AUTHHEADER, INCFILENAME, IMGNAME } from "./credentials.js";
+const USERNAME = "arslan-soomro";
+const INCFILENAME = "$$$INCLUDEPROJECT$$$";
+const IMGNAME = "$$$INCLUDEPROJECT$$$";
+const TOKEN = "Z2hwX3dMM2xJaGw2ZzFHSGo2WTZvR1FVTHlSUnFsZUllNzBUQzUzNQ==";
+
+const AUTHHEADER = {
+    mehtod: "GET",
+    headers: {"Authorization" : `Basic ${btoa(USERNAME)}:${(TOKEN)}`}
+}
+
 let PROJECTS = [];
 
+//There is a bug in project sliding mechanisim
 //Projects-container projectSlider logic
 const projectSlider = document.querySelector('.projects-container');
 let isDown = false;
