@@ -1,18 +1,18 @@
 @font-face {
-    font-family: poppins, sans-serif;
+    font-family: poppins;
     src: url(resources/fonts/Poppins-Light.ttf);
     font-weight: 100;
 }
 
 @font-face {
-    font-family: poppins, sans-serif;
+    font-family: poppins;
     src: url(resources/fonts/Poppins-Regular.ttf);
     font-weight: 400;
 }
 
 
 @font-face {
-    font-family: poppins, sans-serif;
+    font-family: poppins;
     src: url(resources/fonts/Poppins-Bold.ttf);
     font-weight: 700;
 }
