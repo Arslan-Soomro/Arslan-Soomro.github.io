@@ -82,12 +82,12 @@ const filterRepoProps = rawData => {
 
 const getAllRepos = async () => {
 
-    console.log("RETURN " + USERNAME);
+    //console.log("RETURN " + USERNAME);
 
     const res = await fetch(`https://api.github.com/users/${USERNAME}/repos`);
     const data = await res.json();
 
-    console.log(data);
+    //console.log(data);
 
     return data;
 }
@@ -187,7 +187,7 @@ const AddChildren = (elementsArr, parentNode) => {
 
 const formProjects = async (repos) => {
     
-    console.log("Included");
+    //console.log("Included");
 
     let res;
     let data;
@@ -230,7 +230,7 @@ const formProjects = async (repos) => {
     //REMOVE PREVIOUS CHILDREN AND ADD NEW SORTED CHILDREN INTO PROJECTS CONTAINER
     AddChildren(projectCards, projectSlider);
 
-    console.log("Complete");
+    //console.log("Complete");
 }
 
 getAllRepos().then(data => formProjects(data)).catch(err => console.log("Couldn't Load Data", err));
